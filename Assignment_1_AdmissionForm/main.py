@@ -50,7 +50,7 @@ def stu_reg( studRegInfo : stuRegInfo):
             raise ValueError("Name must contain only alphabets and spaces")
         if not(18<=studRegInfo.age<=30):
             raise ValueError("Age must be between 18 and 30")
-        if not "@" in studRegInfo.email:
+        if not "@email.com" in studRegInfo.email:
             raise ValueError("Invalid Email")
         if not(1<=len(studRegInfo.course)<=5):
             raise ValueError("Courses list must be between 1 and 5 courses")
@@ -70,7 +70,7 @@ def stu_reg( studRegInfo : stuRegInfo):
 # Json : 
 #     {
 #     "name": "Alice Smith",
-#     "email": "alice.smith@example.com",
+#     "email": "alice.smith@email.com",
 #     "age": 25,
 #     "course": [
 #         "Python",
@@ -84,7 +84,7 @@ def update_email(student_id : int , email : emailUpdate  ):
     try:
         if not(1000 < student_id < 9999):
             raise ValueError("Invalid ID")
-        if not "@" in email.update_email:
+        if not "@email" in email.update_email:
             raise ValueError("Invalid Email") 
         return{
             "Status" : "OK",
@@ -97,4 +97,4 @@ def update_email(student_id : int , email : emailUpdate  ):
             "Data" : None
         }
 # Use http://127.0.0.1:8000/students/5555/email on postman.
-# Json : { "update_email": "new.email@example.com" }
+# Json : { "update_email": "new.email@email.com" }
