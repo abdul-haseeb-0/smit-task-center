@@ -68,11 +68,12 @@ Feel free to reach out via email or GitHub for collaboration or queries.
 
 - SMIT Generative AI and Data Sciences Student  
 - 🌐 [LinkedIn Profile](https://www.linkedin.com/in/abdul-haseeb-980075323/)  
-- 📫 Email: mirzaabdulhaseeb@example.com  
+- 📫 Email: ah673277@gmail.com  
 
 ---
 
 ## 📜 License
+
 
 This repository is for educational purposes only and does not hold any commercial license.  
 
