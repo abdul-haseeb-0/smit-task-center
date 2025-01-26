@@ -1,120 +1,78 @@
-### **SMIT Assignments Repository** 
+# 🎓 SMIT Assignments Repository
 
-#### **Objective**:  
-This repository contains all the assignments I have completed as part of my **Generative AI and Data Sciences** diploma at **Saylani Mass IT Training (SMIT)**. Each assignment demonstrates practical implementations of the concepts learned in various modules.
-
----
-
-### **Assignment List**  
-
-#### **Assignment 1: University Registration Form API**  
-**Objective**: Build a FastAPI application to simulate a university registration system with input validations and error handling.  
-**Highlights**: Validates user inputs using Pydantic, handles query, path, and body parameters, and includes clear error messages.  
-
-#### **Assignment 2: Data Cleaning and Visualization**  
-**Objective**: Perform data cleaning and analysis using Python. Generate visualizations for actionable insights.  
-**Highlights**: Utilizes `pandas`, `matplotlib`, and `seaborn` for data manipulation and visualization.  
-
-#### **Assignment 3: Generative AI Prompt Engineering**  
-**Objective**: Create and test prompt templates for various generative AI models to produce optimized responses.  
-**Highlights**: Experimented with different AI models, including OpenAI GPT and other prompt generation methods for task-specific output.  
+Welcome to the **SMIT Assignments Repository**! This repository contains all the assignments I have completed as part of my studies in **Generative AI and Data Sciences** at **Saylani Mass IT Training (SMIT)**.
 
 ---
 
-### **Assignment 1: University Registration Form API** 
+## 📂 Repository Structure
 
-#### **Objective**:  
-Build a FastAPI application to simulate a university registration system. This API will validate user inputs (path, query, and body parameters) based on specific constraints and provide appropriate error messages if validations fail.
-
-#### **Requirements**:  
-You are required to implement an API with the following endpoints and constraints:
+The repository is organized by topics/modules for easy navigation. Each folder contains assignment files related to a specific subject or module.
 
 ---
 
-### **Endpoints**
+## 📝 Assignments List
 
-#### 1. **Get Student Information**
-   - **Endpoint**: `GET /students/{student_id}`
-   - **Path Parameter**:
-     - `student_id`: An integer greater than `1000` and less than `9999`.
-   - **Query Parameters**:
-     - `include_grades`: A boolean (true/false) to specify if the grades should be included.
-     - `semester`: An optional string of the format `Fall2024`, `Spring2025`, etc. (Pattern: `^(Fall|Spring|Summer)\d{4}$`).
-
----
-
-#### 2. **Register Student**
-   - **Endpoint**: `POST /students/register`
-   - **Body Parameters**:
-     - `name`: A string (1-50 characters), must contain only alphabets and spaces.
-     - `email`: A valid email address.
-     - `age`: An integer between 18 and 30.
-     - `courses`: A list of strings with course names (minimum 1 course, maximum 5 courses).
-   - **Constraints**:
-     - Each course name should be between 5-30 characters.
-     - Duplicate course names are not allowed.
-   - **Example Request**:
-     ```json
-     {
-       "name": "John Doe",
-       "email": "john.doe@example.com",
-       "age": 22,
-       "courses": ["Mathematics", "Physics", "Chemistry"]
-     }
-     ```
+| 📚 **Module**       | 🖇️ **Topics Covered**                  | 📂 **Folder Name** |
+|----------------------|----------------------------------------|--------------------|
+| **Module 1**         | Python Basics, Loops, Functions       | `Python`           |
+| **Module 2**         | Generative Models, Prompt Engineering | `Module-2/`        |
+| **Module 3**         | Data Cleaning, Visualization          | `Module-3/`        |
+| **Module 4**         | Advanced AI Projects, Deployment      | `Module-4/`        |
 
 ---
 
-#### 3. **Update Student Email**
-   - **Endpoint**: `PUT /students/{student_id}/email`
-   - **Path Parameter**:
-     - `student_id`: An integer greater than `1000` and less than `9999`.
-   - **Body Parameter**:
-     - `email`: A valid email address.
-   - **Example Request**:
-     ```json
-     {
-       "email": "new.email@example.com"
-     }
-     ```
+## 💻 Technologies Used
+
+- **Languages**: Python 🐍  
+- **Libraries**:  
+  - `pandas` for data manipulation  
+  - `matplotlib` & `seaborn` for visualization  
+  - `numpy` for numerical operations  
 
 ---
 
-### **Validation Requirements**
-1. **Path Parameters**:
-   - Use Pydantic constraints to enforce the valid range for `student_id`.
-   - Raise a 422 HTTP error with a message if the `student_id` is invalid.
+## 🏆 Goals of the Assignments
 
-2. **Query Parameters**:
-   - Validate the semester format and ensure `include_grades` is a boolean.
-   - If invalid, return a 422 HTTP error with an explanation.
-
-3. **Body Parameters**:
-   - Validate all fields using Pydantic models.
-   - Return clear error messages for:
-     - Missing fields.
-     - Invalid email formats.
-     - Names that contain non-alphabetic characters.
-     - Ages that are out of the range.
-     - Course lists that exceed the size limit or contain duplicates.
+- Master **Python programming** for AI and Data Science.  
+- Understand and implement **Generative AI models**.  
+- Build and deploy **real-world applications**.  
+- Learn best practices for **data analysis** and **visualization**.
 
 ---
 
-### **Deliverables**
-1. FastAPI project folder containing:
-   - `main.py`: Contains all endpoints and their logic.
-   - Validation logic implemented using Pydantic models and FastAPI constraints.
-   - Proper error messages for validation failures.
-2. **Postman Collection**:
-   - Export and share a Postman collection to test all endpoints.
+## 🌟 Highlights
+
+- 📂 **Organized Structure**: Each assignment is categorized by module for easy reference.  
+- 🛠️ **Practical Applications**: Hands-on projects designed for real-world scenarios.  
+- 🧠 **Knowledge Growth**: Covers essential skills for AI and Data Science.
 
 ---
 
-### **Bonus Points**:
-- Add a middleware to log incoming requests.
-- Add documentation (using Swagger) with clear examples for each endpoint.
-- Implement a feature to save data to an in-memory database (like a Python dictionary).
+## 📌 How to Use This Repository
+
+1. **Clone the Repository**:  
+   ```bash
+   git clone https://github.com/Abdul-Haseeb-AI/SMIT-Assignments.git
+  
+## 🤝 Contributions
+
+This repository is a personal collection of my assignments and is not open to contributions. However, feedback and suggestions are welcome!
+
+Feel free to reach out via email or GitHub for collaboration or queries.
 
 ---
 
-- Submit https://forms.gle/xJJpuVZW3kEesGcJ8
+## 🧑‍💻 Author
+
+**Abdul Haseeb**
+
+- SMIT Generative AI and Data Sciences Student  
+- 🌐 [LinkedIn Profile](https://www.linkedin.com/in/abdul-haseeb-980075323/)  
+- 📫 Email: mirzaabdulhaseeb@example.com  
+
+---
+
+## 📜 License
+
+This repository is for educational purposes only and does not hold any commercial license.  
+
