@@ -1,0 +1,93 @@
+Hi, what you understand from this prompt.
+
+Role : Professional AI Agentic software Developer
+instructions : read the following prompt carefully and make such software for me.
+
+use fastapi for backend, for agents use OpenAI SDK and react for frontend and make a proper filefolder structure and don't make code very complex code, just make everything simple and easy to understand.
+
+prompt : I want to make an app which will manage the whole airline setup.
+
+software name : ReadyFlight ( or use better name ) 
+
+Layers : staff_agent & user_agent
+    staff_agent:
+    CRUD tools will be flight_reg_tool, flight_read_tool, flight_update_tool, flight_delete_tool,
+    You can also modify agents name and functionality & you add or remove agents based on requirement.
+        Working:
+            flight_reg_tool -> get flight number, seats available, timing, location information from the staff (use pydantic BaseModel ) and register flight in Database, so that users can make bookings on them.
+            flight_read_tool -> access registered flight from flight number in databases and give all the reserved seats number, available seats and all other information about flight to the staff.
+            flight_update_tool -> access registered flight from flight number in databases and and make changes/modifications in DB content ( like seats, timing) of that flight instructed by the staff.
+            flight_delete_tool -> access registered flight from flight number in databases and delete it from databases by confirming form the staff_user.
+
+    user_agent :
+    CRUD Agents will be booking_tool, book_read_tool, book_update_tool, book_delete_tool 
+    You can also modify agents name and functionality & you add or remove agents based on requirement.
+        Working:
+            booking_tool -> get required number of seats( like 4 seats - optional), timing( like 4am to 5am - optional ), location( from where to where user wants to go), confirm (confirm to reserve seat) information from the user (use pydantic BaseModel ) and reserve seats in flight for him in databases, so that users make bookings on them, in response also return flight num, secret_code (generate it)
+            book_read_tool -> access registered seats from secret_code and give all the reserved seats number and all other information about flight to the user.
+            book_update_tool -> access registered seats from secret_code in databases and and make changes/modifications in DB content ( like seats numbers ) of that flight instructed by the user.
+            book_delete_tool -> access registered seats from secret_code in databases and delete it from databases by confirming form the user then these seats will be available for others.
+
+Utils : faq_agent, help_center, feedback
+    faq_agent -> use tools of basic info (airport info), additional info (allowed baggages, available wifi, airport name, address) , flights info from databases ( flight timing and locations to go )
+
+Agents Features:
+    Honesty -> 95%
+    fun -> 75%
+    humanized response -> 98%
+    accuracy -> 98%
+
+
+_______________________
+
+
+make such software for me.
+
+use fastapi for backend, 
+
+for agents use OpenAI SDK 
+
+chainlit or react (only one) for frontend chat like interface
+
+don't make code very complex code, 
+
+just make everything simple and easy to understand.
+
+I want to make an app which will manage the whole airline setup, providing appropriate access to staff and customers.  Agents manage everything from entering flight info to booking of seats.
+
+software name : ReadyFlight ( or use better name instead ) 
+
+Layers : staff_agent & user_agent
+
+    staff_agent: CRUD tools 
+
+    You can also modify agents name and functionality & you add or remove agents based on requirement.
+
+       
+
+    customer_agent : CRUD 
+
+    You can also modify agents name and functionality & you add or remove agents based on requirement.
+
+        
+
+Utils : faq_agent 
+
+    faq_agent -> use tools of basic info (airport info), additional info (allowed baggages, available wifi, airport name, address) , flights info from databases ( flight timing and locations to go )
+
+Agents Features (optional):
+
+    Honesty -> 95%
+
+    fun -> 75%
+
+    humanized response -> 98%
+
+    accuracy -> 98%
+
+I am using gemini api key and openai sdk.
+
+You can make code long if required
+
+Here is code which I wrote,
+
